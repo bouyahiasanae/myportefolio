@@ -25,7 +25,6 @@ body {
     position: absolute;
     padding: 8px 12px;
     border-radius: 50%;
-    border: none;
     cursor: pointer;
     font-size: 18px;
     margin-left: 4.2rem;
@@ -52,10 +51,6 @@ nav .logo a{
     color: var(--primary-color);
     margin-left: 8rem;
 
-}
-nav .logo a:hover {
-    color: var(--primary-color-dark);
-   
 }
 nav .checkbox {
     display: none;

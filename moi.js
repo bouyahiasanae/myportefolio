@@ -21,15 +21,18 @@ let letter = '';
     }
 })();
 const toggleBtn = document.getElementById("theme-toggle");
+const img = document.getElementById("profile-img");
 
 toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
     if (document.body.classList.contains("dark")) {
         toggleBtn.textContent = "☀️";
+        img.src = "./light.jpeg";
         localStorage.setItem("theme", "dark");
     } else {
         toggleBtn.textContent = "🌙";
+        img.src = "./moi.jpg";
         localStorage.setItem("theme", "light");
     }
 });
@@ -37,4 +40,7 @@ toggleBtn.addEventListener("click", () => {
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
     toggleBtn.textContent = "☀️";
+    img.src = "./light.jpg";
+} else {
+    img.src = "./moi.jpe";
 }
