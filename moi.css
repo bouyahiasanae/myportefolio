@@ -431,10 +431,18 @@ color:white;
     align-items: center;
   
 }
-.image2 img{
-    width:70%;
+.image2 img {
+    width: 70%;
     height: 70%;
+    animation: rotate 4s linear infinite;
 }
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .footer {
     background-color: white; 
     padding: 15px;
