@@ -125,6 +125,7 @@ ul li a:hover {
     color: var(--text-dark);
     white-space: nowrap;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .description {
     line-height: 2rem;
