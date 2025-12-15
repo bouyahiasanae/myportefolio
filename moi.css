@@ -19,6 +19,16 @@ a{
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#theme-toggle {
+    position: absolute;
+    padding: 8px 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 4.2rem;
 }
 nav {
     width: 100%;
@@ -40,7 +50,7 @@ nav .logo a{
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
-    margin-left: 4.2rem;
+    margin-left: 8rem;
 
 }
 nav .logo a:hover {
@@ -481,4 +491,32 @@ color:white;
     border-bottom-color: var(--primary-color);
     color: var(--primary-color);; 
    
+}
+body.dark {
+    --primary-color: #900b0b;
+    --primary-color-dark: #9f1239;
+    --secondary-color: #0f172a;
+    --text-dark: #f1f5f9;
+    --text-light: #94a3b8;
+    --extra-light: #1e293b;
+}
+
+
+body.dark nav,
+body.dark .footer {
+    background-color: var(--extra-light);
+}
+
+
+body.dark .card,
+body.dark .Expériences-item,
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+    background-color: var(--extra-light);
+    color: var(--text-dark);
+}
+
+
+body.dark a {
+    color: var(--text-dark);
 }
