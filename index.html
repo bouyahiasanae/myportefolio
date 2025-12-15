@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="./moi.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <script src="script.js" defer></script>
+    <script src="../portefolio/moi.js" defer></script>
 </head>
 
 <body>
     <nav>
         <div class="nav__content">
-            <div class="logo"><a href="#">SANA BOUYAHIA</a></div>
+            <div  class="logo"><a href="#logo">SANA BOUYAHIA</a></div>
             <label for="check" class="checkbox">
                 <i class="ri-menu-line"></i>
             </label>
@@ -28,20 +28,23 @@
             </ul>
         </div>
     </nav>
-    <section class="section">
+    <section id="logo" class="section">
         <div id="á propos" class="section__container">
             <div class="content">
                 <p class="subtitle">SALUT</p>
                 <h1 class="title">
-                    Moi c’est<span><br> SANA <br> Je suis </span> Développeur web
+                    Moi c’est<span><br>SANA </span>
                 </h1>
+                <h2 class="typing-text"></h2>
                 <p class="description">
                     Je suis Bouyahia Sana; un technicien spécialisé en cybersécurité, j’ai obtenu mon diplôme á
                     l’ISTA Hay Hassani 1 dans 2024, et actuellement, je poursuis mes études en développement
                     informatique à la Faculté des Sciences d’Ain Chock.
                 </p>
                 <div class="action__btns">
-                    <button class="portfolio">Portfolio</button>
+                  <a href="../portefolio/CV Bouyahia sana.pdf" download class="portfolio">
+                   Télécharger mon CV
+                  </a>
                 </div>
                 <div class="social-icons">
                     <!-- LinkedIn -->
@@ -110,7 +113,7 @@
             </h6>
             <div id="formation" class="Formations">
                 <div class="card">
-                    <h2>2025-2026</h2>
+                    <h3>2025-2026</h3>
                     <p>Licence professionnelle continue en développement informatique (en cours..)</p>
                     <p>Université Hassan 2 de Casablanca</p>
                 </div>
@@ -120,12 +123,12 @@
                     <p>Institut spécialisé en technologie appliquée Hay Hassani 1</p>
                 </div>
                 <div class="card">
-                    <h4>2020-2022</h4>
+                    <h3>2020-2022</h3>
                     <p>Études universitaires en physique</p>
                     <p>Faculté des Sciences Semlalia-Marrakech</p>
                 </div>
                 <div class="card">
-                    <h5>2019-2020</h5>
+                    <h3>2019-2020</h3>
                     <p>Baccallauréat Sciences physique et chimie</p>
                     <p>Lycée qualifiant Bouzaroual ZAGORA</p>
                 </div>
@@ -149,8 +152,8 @@
 
             </section>
             <section id="contact" class="contact-section">
-                <p class="titre-10">✉️ Contactez-moi</p>
                 <div class="contact-container">
+                    <p class="titre-10">✉️ Contactez-moi</p>
                     <form class="contact-form">
                         <label for="email">Adresse e-mail :</label>
                         <input type="email" id="email" placeholder="Adresse e-mail" required>
@@ -160,6 +163,9 @@
 
                         <button type="submit" class="send-btn">Envoyer</button>
                     </form>
+                </div>
+                <div class="image2">
+                    <img src="../portefolio/social-media-1-48.svg">
                 </div>
             </section>
         </div>
