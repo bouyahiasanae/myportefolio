@@ -19,7 +19,7 @@ a{
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 #theme-toggle {
     position: absolute;
@@ -68,7 +68,7 @@ ul {
     align-items: center;
     gap: 1rem;
     list-style: none;
-    transition: left 0.3s;
+    transition: left 0.5s;
 }
 ul li a{
     padding: 0.5rem 1rem;
@@ -76,7 +76,7 @@ ul li a{
     text-decoration: none;
     font-weight: 600;
     color:var(--text-dark);
-    transition: 0.3s;
+    transition: 0.5s;
 
 }
 ul li a:hover {
@@ -151,7 +151,7 @@ ul li a:hover {
     color: var(--primary-color);                    
     border-radius: 8px;              
     text-decoration: none;           
-    transition:  0.3s transform ease;   
+    transition:  0.5s transform ease;   
     border: 2px solid var(--primary-color);  
     font-weight: bold;
     align-items: center;
@@ -183,7 +183,7 @@ ul li a:hover {
     width:60% ;
     height: 70%;
     border-radius: 10%;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     display: flex;
     border: 2px solid var(--primary-color-dark);
 }
@@ -256,7 +256,7 @@ ul li a:hover {
     border-radius: 10%;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.20);
     padding: 25px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     border-left: 4px solid var(--primary-color-dark);
   }
   
@@ -281,7 +281,6 @@ ul li a:hover {
     font-size: 2rem;
     justify-content: center;
     text-align: center;
-    color: var(--primary-color);
     position: relative;
     width: 100%;
   }
@@ -293,14 +292,9 @@ ul li a:hover {
     background-color: var(--primary-color-dark);
     margin-top: 5px;
   }
-  .card h3:hover::after {
-    background-color: white;
-  }
+
 .card:hover h3 {
 color:white;
-}
-.card p:hover {
-    color: white;
 }
  .titre-h7 {
     font-size: 3rem;
@@ -330,7 +324,7 @@ color:white;
     border-left: 4px solid var(--primary-color-dark);
     border-right: 4px solid var(--primary-color-dark);
     border-radius: 5px;
-    transition: transform 0.3s ease; 
+    transition: transform 0.5s ease; 
 }
 .Expériences-item:hover{
     transform: translateY(-8px);
@@ -442,7 +436,13 @@ color:white;
 .image2 img {
     width: 70%;
     height: 70%;
-    animation: rotate 4s linear infinite;
+    animation: zoom 3s ease-in-out infinite;
+}
+
+@keyframes zoom {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 @keyframes rotate {
@@ -481,7 +481,7 @@ color:white;
     text-decoration: none;
     color: black;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .footer-links li a:hover {
@@ -560,7 +560,7 @@ body.dark a {
 .skill {
   background: var(--secondary-color);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .skill img {
@@ -574,7 +574,3 @@ body.dark a {
   color: var(--text-dark);
 }
 
-.skill:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
