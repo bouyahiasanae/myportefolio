@@ -23,24 +23,34 @@ let letter = '';
 const toggleBtn = document.getElementById("theme-toggle");
 const img = document.getElementById("profile-img");
 
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
 
+function switchTheme() {
+    const isDark = document.body.classList.contains("dark");
+
+    img.style.opacity = 0;
+    setTimeout(() => {
+        if (isDark) {
+            img.src = "./moi.jpg"; 
+        } else {
+            img.src = "./light.jpeg"; 
+        }
+        img.style.opacity = 1;
+    }, 300);
+
+    document.body.classList.toggle("dark");
     if (document.body.classList.contains("dark")) {
         toggleBtn.textContent = "☀️";
-        img.src = "./light.jpeg";
         localStorage.setItem("theme", "dark");
     } else {
         toggleBtn.textContent = "🌙";
-        img.src = "./moi.jpg";
         localStorage.setItem("theme", "light");
     }
-});
-
+}
+toggleBtn.addEventListener("click", switchTheme);
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
     toggleBtn.textContent = "☀️";
-    img.src = "./light.jpg";
+    img.src = "./light.jpeg";
 } else {
-    img.src = "./moi.jpe";
+    img.src = "./moi.jpg";
 }
