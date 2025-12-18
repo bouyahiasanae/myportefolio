@@ -49,7 +49,6 @@ body {
 .intro-name {
   font-size: 2.4rem;
   color: var(--primary-color-dark);
-  letter-spacing: 2px;
   animation: slideUp 1.5s ease;
   line-height: 4rem;
 }
