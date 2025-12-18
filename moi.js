@@ -23,34 +23,25 @@ let letter = '';
 const toggleBtn = document.getElementById("theme-toggle");
 const img = document.getElementById("profile-img");
 
-
-function switchTheme() {
-    const isDark = document.body.classList.contains("dark");
+toggleBtn.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark");
 
     img.style.opacity = 0;
+
     setTimeout(() => {
         if (isDark) {
-            img.src = "./moi.jpg"; 
+            img.src = "../portefolio/light.jpeg";
+            toggleBtn.textContent = "☀️";
         } else {
-            img.src = "./light.jpeg"; 
+            img.src = "../portefolio/moi.jpg";
+            toggleBtn.textContent = "🌙";
         }
         img.style.opacity = 1;
     }, 300);
+});
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+  }, 4000);
+});
 
-    document.body.classList.toggle("dark");
-    if (document.body.classList.contains("dark")) {
-        toggleBtn.textContent = "☀️";
-        localStorage.setItem("theme", "dark");
-    } else {
-        toggleBtn.textContent = "🌙";
-        localStorage.setItem("theme", "light");
-    }
-}
-toggleBtn.addEventListener("click", switchTheme);
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-    toggleBtn.textContent = "☀️";
-    img.src = "./light.jpeg";
-} else {
-    img.src = "./moi.jpg";
-}
