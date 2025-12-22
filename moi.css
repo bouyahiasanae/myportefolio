@@ -28,13 +28,13 @@ body {
   width: 100%;
   height: 100vh;
   background: var(--secondary-color);
-  display: flex;          
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem; 
+  gap: 3rem;
   z-index: 9999;
   animation: fadeOut 1s ease forwards;
-  animation-delay: 3s;
+  animation-delay: 4.5s; 
 }
 
 .intro-img {
@@ -43,15 +43,19 @@ body {
   border-radius: 8%;
   object-fit: cover;
   border: 2px solid var(--primary-color-dark);
-  animation: zoomIn 1.5s ease;
-}
 
+  animation: zoomIn 1.5s ease forwards;
+}
 .intro-name {
   font-size: 2.4rem;
   color: var(--primary-color-dark);
-  animation: slideUp 1.5s ease;
   line-height: 4rem;
+
+  opacity: 0;
+  animation: slideUp 1.5s ease forwards;
+  animation-delay: 1.7s;
 }
+
 @keyframes zoomIn {
   from {
     transform: scale(0);
@@ -80,13 +84,14 @@ body {
     visibility: hidden;
   }
 }
+
 #theme-toggle {
-    position: absolute;
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
-    margin-left: 4.2rem;
+    transition: 0.3s;
+    margin-right: 4rem;
 }
 nav {
     width: 100%;
@@ -108,7 +113,7 @@ nav .logo a{
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
-    margin-left: 8rem;
+    margin-left: 4rem;
 
 }
 nav .checkbox {
@@ -155,33 +160,32 @@ ul li a:hover {
     display: grid;
     grid-template-columns: repeat(2,1fr);
    justify-content: space-around;
-   gap:4rem;
+   gap:2rem;
 }
 .content{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.6rem;
+    gap: 1.2rem;
     margin-left: 2rem;
     margin-top: 3rem;
 
 }
 .subtitle{
     letter-spacing: 2px;
-    color: var(--text-light);
+    color: var(--text-dark);
     font-weight: 600;
     margin-bottom: .5rem;
     margin-top: 2rem;
 }
 .title{
     font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 3rem;
+    line-height: 4rem;
     color: var(--text-dark);
 
 }
 .title span{
-    font-weight: 600;
+    line-height: 3rem;
     color: var(--primary-color);
 }
 .typing-text {
@@ -229,12 +233,10 @@ ul li a:hover {
 
 
 .image {
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
     
 .image img{
@@ -243,7 +245,6 @@ ul li a:hover {
     height: 70%;
     border-radius: 10%;
     transition: transform 0.5s ease;
-    display: flex;
     border: 2px solid var(--primary-color-dark);
 }
 .image img:hover{
@@ -321,9 +322,8 @@ ul li a:hover {
   
   .card:hover {
     transform: translateY(-8px);
-    background-color:var(--primary-color-dark);
-    color: white;
-    border-left-color:white ;
+    background-color:var(--secondary-color);
+    border-left-color:var(--primary-color) ;
   }
   
   .card p {
@@ -335,6 +335,7 @@ ul li a:hover {
     
   }
   .card  h3 {
+    color: var(--primary-color);
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 2rem;
@@ -352,9 +353,6 @@ ul li a:hover {
     margin-top: 5px;
   }
 
-.card:hover h3 {
-color:white;
-}
  .titre-h7 {
     font-size: 3rem;
     font-weight: bold;
@@ -387,6 +385,7 @@ color:white;
 }
 .Expériences-item:hover{
     transform: translateY(-8px);
+    background-color: var(--secondary-color);
 }
 .Expériences-item p,
 .Expériences-item span {
@@ -405,7 +404,7 @@ color:white;
     font-weight: bold; 
     padding: 0;
     color: var(--primary-color);
-    margin-bottom: 2.2rem;
+   
 }
 .date {
     color: #900b0b;
@@ -427,7 +426,7 @@ color:white;
 }
 .contact-section {
     margin-top: 1rem;
-    margin-left: 2.6rem;
+    margin-left: 2rem;
     width: var(--max-width);
     display: grid;
     grid-template-columns: repeat(2,1fr);
