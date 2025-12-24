@@ -328,7 +328,7 @@ ul li a:hover {
   
   .card p {
     margin: 8px 0;
-    line-height: 1.5;
+    line-height: 2rem;
     color: var(--text-dark);
     justify-content: center;
     text-align: center;
@@ -593,7 +593,9 @@ body.dark a {
 }
 .image-pro img {
   width: 80%;
+  height: 580px;
   transition: transform 0.4s ease;
+  margin-top: 4rem;
 }
 
 .image-pro img:hover {
@@ -604,21 +606,24 @@ body.dark a {
 }
 
 .section-title {
-  margin-bottom: 3rem;
   color: var(--primary-color);
-  font-size: 1.8rem;
+  font-size: 3rem;
+  margin: 2rem 0px 4rem 2rem;
 }
 
 .skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  line-height: 2rem;
 }
 
 .skill {
   background: var(--secondary-color);
   text-align: center;
+  line-height: 2rem;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin-left: 2rem;
 }
 
 .skill img {
@@ -627,8 +632,68 @@ body.dark a {
 }
 
 .skill p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--text-dark);
 }
+.skills1 {
+  background: var(--secondary-color);
+}
+
+.skills1 ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.skills1 ul li {
+  margin-bottom: 8px;
+  line-height: 1rem;
+}
+.timeline {
+  position: relative;
+  margin-top: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color-dark);
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.timeline-item .dot {
+  width: 14px;
+  height: 14px;
+  background: var(--primary-color-dark);
+  border-radius: 50%;
+}
+
+.timeline-item .content {
+  background: white;
+  border-radius: 12px;
+  margin-left: 30px;
+  width: 100%;
+}
+.skills1 .content h3 {
+  font-size: 2rem;
+  color: var(--primary-color-dark);
+  margin:1rem;
+ 
+}
+.skills1 h2 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin: 2rem ;
+}
+
+
+
 
