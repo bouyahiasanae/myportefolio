@@ -403,6 +403,7 @@ ul li a:hover {
     font-size: 3rem;
     font-weight: bold; 
     padding: 0;
+    margin-top: 4rem;
     color: var(--primary-color);
    
 }
@@ -658,7 +659,7 @@ body.dark a {
   content: "";
   position: absolute;
   top: 0;
-  width: 2px;
+  width: 4px;
   height: 100%;
   background: var(--primary-color-dark);
 }
@@ -666,12 +667,12 @@ body.dark a {
 .timeline-item {
   position: relative;
   display: flex;
-  margin-bottom: 40px;
 }
 
 .timeline-item .dot {
   width: 14px;
   height: 14px;
+  margin-left: 1rem;
   background: var(--primary-color-dark);
   border-radius: 50%;
 }
@@ -679,8 +680,14 @@ body.dark a {
 .timeline-item .content {
   background: white;
   border-radius: 12px;
-  margin-left: 30px;
-  width: 100%;
+  margin-right: 2rem;
+  width: var(--max-width);
+  transition: transform 0.3s ease;
+  border: 2px solid var(--primary-color-dark);
+}
+ .timeline-item:hover .content {
+  transform: translateY(-6px);
+  background-color: var(--secondary-color);
 }
 .skills1 .content h3 {
   font-size: 2rem;
@@ -691,7 +698,7 @@ body.dark a {
 .skills1 h2 {
   font-size: 3rem;
   color: var(--primary-color);
-  margin: 2rem ;
+  margin: 2rem 2rem 4rem 2rem ;
 }
 
 
