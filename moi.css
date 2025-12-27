@@ -411,6 +411,29 @@ ul li a:hover {
     color: #900b0b;
     font-size: 1.8rem;
 }
+.exp-links {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+}
+
+.exp-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color-dark);
+    padding: 0.7rem 1.6rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.exp-btn:hover {
+    background-color: var(--primary-color-dark);
+    color: white;
+    transform: translateY(-3px);
+}
+
 .social-icons a {
     display: inline-flex;
     justify-content: center;
@@ -649,6 +672,7 @@ body.dark a {
 .skills1 ul li {
   margin-bottom: 8px;
   line-height: 1rem;
+  color: var(--text-dark);
 }
 .timeline {
   position: relative;
@@ -659,11 +683,10 @@ body.dark a {
   content: "";
   position: absolute;
   top: 0;
-  width: 4px;
+  width: 3px;
   height: 100%;
   background: var(--primary-color-dark);
 }
-
 .timeline-item {
   position: relative;
   display: flex;
@@ -672,8 +695,7 @@ body.dark a {
 .timeline-item .dot {
   width: 14px;
   height: 14px;
-  margin-left: 1rem;
-  background: var(--primary-color-dark);
+  background-color: var(--primary-color-dark);
   border-radius: 50%;
 }
 
@@ -699,6 +721,12 @@ body.dark a {
   font-size: 3rem;
   color: var(--primary-color);
   margin: 2rem 2rem 4rem 2rem ;
+}
+
+body.dark .timeline-item .content {
+    background-color: var(--extra-light);
+    color: var(--text-dark);
+    border: 2px solid var(--primary-color-dark);
 }
 
 
