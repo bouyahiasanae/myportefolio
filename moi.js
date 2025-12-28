@@ -30,10 +30,10 @@ toggleBtn.addEventListener("click", () => {
 
     setTimeout(() => {
         if (isDark) {
-            img.src = "../portefolio/light.jpeg";
+            img.src = "./light.jpeg";
             toggleBtn.textContent = "☀️";
         } else {
-            img.src = "../portefolio/moi.jpg";
+            img.src = "./moi.jpg";
             toggleBtn.textContent = "🌙";
         }
         img.style.opacity = 1;

@@ -197,7 +197,7 @@ ul li a:hover {
 }
 .description {
     line-height: 2rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 2rem;
     font-size: 1.4rem;
 }
@@ -512,12 +512,11 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-  
+    align-items: center;  
 }
 .image2 img {
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 60%;
     animation: zoom 3s ease-in-out infinite;
 }
 
@@ -683,7 +682,7 @@ body.dark a {
   content: "";
   position: absolute;
   top: 0;
-  width: 3px;
+  width: 2px;
   height: 100%;
   background: var(--primary-color-dark);
 }
@@ -695,7 +694,9 @@ body.dark a {
 .timeline-item .dot {
   width: 14px;
   height: 14px;
-  background-color: var(--primary-color-dark);
+  border: 1px solid var(--primary-color-dark);
+  background-color: var(--secondary-color);
+  margin-left: 1rem;
   border-radius: 50%;
 }
 
@@ -728,7 +729,61 @@ body.dark .timeline-item .content {
     color: var(--text-dark);
     border: 2px solid var(--primary-color-dark);
 }
+.Certificats {
+   margin-left: 2rem;
+}
+.cert-grid {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.Certificat-card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 14px;
+    border-left: 5px solid var(--primary-color-dark);
+    height: 150px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    position: relative;
+}
+.Certificat-card::before {
+    content: "🎓";
+    font-size: 26px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    opacity: 0.25;
+}
 
+.Certificat-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.Certificat-card:hover {
+    transform: translateY(-8px);
+    background-color: var(--secondary-color);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+body.dark .Certificats {
+    color: var(--text-dark);
+}
+
+body.dark .Certificat-card {
+    background-color: var(--extra-light);
+}
+
+body.dark .Certificat-card p {
+    color: var(--text-dark);
+}
+
+body.dark .Certificat-card::before {
+    opacity: 0.15;
+}
 
 
 
